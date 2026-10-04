@@ -12,12 +12,14 @@
   "deposit_refund_period": {
     "mentioned": false,
     "value": null,
-    "unit": "none"
+    "unit": "none",
+    "keyword_hit": false
   },
   "lock_in_period": {
     "mentioned": false,
     "value": null,
-    "unit": "none"
+    "unit": "none",
+    "keyword_hit": false
   },
   "notice_period": {
     "mentioned": true,
@@ -27,6 +29,7 @@
   "maintenance_charges": {
     "mentioned": false,
     "value": null,
-    "unit": "none"
+    "unit": "none",
+    "keyword_hit": false
   }
 }

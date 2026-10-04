@@ -15,7 +15,8 @@ from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "data" / "agreements" / "synthetic"
 LABELS = ROOT / "data" / "labels"
-NM = {"mentioned": False, "value": None, "unit": "none"}
+NM = {"mentioned": False, "value": None, "unit": "none", "keyword_hit": False}
+NM_KW = {**NM, "keyword_hit": True}  # word appears in the text but no value is stated
 
 
 def L(v, u):
@@ -60,7 +61,7 @@ CASES = [
          ],
          label=dict(monthly_rent=L(9500, "inr"), security_deposit=L(15000, "inr"),
                     deposit_refund_period=L(15, "days"), lock_in_period=NM,
-                    notice_period=L(30, "days"), maintenance_charges=NM)),  # keyword 'maintenance' present, no charge
+                    notice_period=L(30, "days"), maintenance_charges=NM_KW)),  # keyword 'maintenance' present, no charge
     dict(name="syn_C_indian_format", title="LEAVE AND LICENSE / RENT AGREEMENT", place="Mumbai", pages_pad=2,
          clauses=[
              "The term of this tenancy is eleven months commencing from the date of execution.",
