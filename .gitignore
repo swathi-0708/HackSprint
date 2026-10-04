@@ -11,3 +11,7 @@ data/audio/
 *.pdf
 *.wav
 *.mp3
+
+# synthetic test agreements are safe to commit (no personal data)
+!data/agreements/synthetic/
+!data/agreements/synthetic/*.pdf

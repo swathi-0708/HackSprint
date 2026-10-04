@@ -1,0 +1,32 @@
+{
+  "monthly_rent": {
+    "mentioned": true,
+    "value": 18000,
+    "unit": "inr"
+  },
+  "security_deposit": {
+    "mentioned": true,
+    "value": 2,
+    "unit": "months_of_rent"
+  },
+  "deposit_refund_period": {
+    "mentioned": true,
+    "value": 30,
+    "unit": "days"
+  },
+  "lock_in_period": {
+    "mentioned": true,
+    "value": 6,
+    "unit": "months"
+  },
+  "notice_period": {
+    "mentioned": true,
+    "value": 1,
+    "unit": "months"
+  },
+  "maintenance_charges": {
+    "mentioned": true,
+    "value": 1500,
+    "unit": "inr"
+  }
+}
