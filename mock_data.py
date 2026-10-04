@@ -60,16 +60,16 @@ claims = [
     ),
 
     Claim(
-        field="maintenance_fee",
-        value=5000,
+        field="parking_fee",
+        value=1000,
         unit="INR",
         language="Tamil"
     ),
 
     Claim(
-        field="parking_fee",
-        value=1000,
-        unit="INR",
+        field="notice_period",
+        value=2,
+        unit="months",
         language="Tamil"
     ),
 ]

@@ -6,8 +6,7 @@ for claim in claims:
 
     result = compare_claim(claim, agreement_facts)
 
-    print("\n--------------------")
-
+    print("--------------------")
     print("Field:", result.field)
     print("User said:", result.claim_value)
     print("Agreement says:", result.agreement_value)
