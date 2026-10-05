@@ -1,0 +1,61 @@
+{
+  "agreement_id": "a1801fe8ecd4",
+  "source_name": "syn_B_pg_sparse",
+  "fixture": true,
+  "terms": {
+    "monthly_rent": {
+      "mentioned": true,
+      "value": 9500,
+      "unit": "inr",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "security_deposit": {
+      "mentioned": true,
+      "value": 15000,
+      "unit": "inr",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "deposit_refund_period": {
+      "mentioned": true,
+      "value": 15,
+      "unit": "days",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "lock_in_period": {
+      "mentioned": false,
+      "value": null,
+      "unit": "none",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "notice_period": {
+      "mentioned": true,
+      "value": 30,
+      "unit": "days",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "maintenance_charges": {
+      "mentioned": false,
+      "value": null,
+      "unit": "none",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    }
+  }
+}

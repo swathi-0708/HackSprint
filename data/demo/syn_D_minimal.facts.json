@@ -1,0 +1,61 @@
+{
+  "agreement_id": "e098a61a3bc9",
+  "source_name": "syn_D_minimal",
+  "fixture": true,
+  "terms": {
+    "monthly_rent": {
+      "mentioned": true,
+      "value": 12000,
+      "unit": "inr",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "security_deposit": {
+      "mentioned": true,
+      "value": 36000,
+      "unit": "inr",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "deposit_refund_period": {
+      "mentioned": false,
+      "value": null,
+      "unit": "none",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "lock_in_period": {
+      "mentioned": false,
+      "value": null,
+      "unit": "none",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "notice_period": {
+      "mentioned": true,
+      "value": 60,
+      "unit": "days",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "maintenance_charges": {
+      "mentioned": false,
+      "value": null,
+      "unit": "none",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    }
+  }
+}

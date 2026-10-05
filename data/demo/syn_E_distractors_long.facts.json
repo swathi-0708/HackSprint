@@ -1,0 +1,61 @@
+{
+  "agreement_id": "d01cd33675f5",
+  "source_name": "syn_E_distractors_long",
+  "fixture": true,
+  "terms": {
+    "monthly_rent": {
+      "mentioned": true,
+      "value": 30000,
+      "unit": "inr",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "security_deposit": {
+      "mentioned": true,
+      "value": 90000,
+      "unit": "inr",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "deposit_refund_period": {
+      "mentioned": true,
+      "value": 45,
+      "unit": "days",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "lock_in_period": {
+      "mentioned": true,
+      "value": 3,
+      "unit": "months",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "notice_period": {
+      "mentioned": true,
+      "value": 15,
+      "unit": "days",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    },
+    "maintenance_charges": {
+      "mentioned": true,
+      "value": 800,
+      "unit": "inr",
+      "clause_text": null,
+      "verified": null,
+      "page": null,
+      "confidence": null
+    }
+  }
+}
