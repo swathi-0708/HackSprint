@@ -11,7 +11,7 @@ import services
 from compare import compare_all
 from i18n import LANGS, SENTENCES_EN, T
 
-st.set_page_config(page_title="Rental claim checker", page_icon="📄", layout="centered",
+st.set_page_config(page_title="DocVox", page_icon="🎙️", layout="centered",
                    initial_sidebar_state="collapsed")
 
 # outcome -> (icon, solid colour, text on solid, light tint)
@@ -27,7 +27,8 @@ st.markdown('''<style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap');
 html { font-size: 18px; }
 .stApp { background: #EAF4FF !important; color: #0F1F33 !important; }
-.stApp, .stApp * { font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Tamil', sans-serif; }
+.stApp, .stApp *:not([data-testid="stIconMaterial"]):not([class*="material-symbols"]) { font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Tamil', sans-serif; }
+[data-testid="stToast"], [data-testid="stToastContainer"] { display: none !important; }
 [data-testid="stHeader"], [data-testid="stToolbar"], [data-testid="stSidebar"],
 [data-testid="stSidebarCollapsedControl"], [data-testid="stDecoration"] { display: none !important; }
 .block-container { max-width: 860px; padding-top: 1.4rem; padding-bottom: 3rem; }
@@ -38,7 +39,12 @@ div[role="radiogroup"] label { background: #FFFFFF; border: 2px solid #1F6BFF; b
 div[role="radiogroup"] label p { color: #1F6BFF !important; font-weight: 700; font-size: 1.05rem; margin: 0; }
 div[role="radiogroup"] label:has(input:checked) { background: #1F6BFF; }
 div[role="radiogroup"] label:has(input:checked) p { color: #FFFFFF !important; }
-div[role="radiogroup"] label > div:first-child { display: none; }
+div[role="radiogroup"] label[data-testid="stRadioOption"] > div > div:first-child { display: none !important; }
+.brand { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.1rem; }
+.brand .logo { background: #1F6BFF; border-radius: 12px; padding: .25rem .5rem; font-size: 1.3rem; }
+.brand .bname { font-size: 1.7rem; font-weight: 700; color: #0F1F33; letter-spacing: -.01em; }
+.brand .bname b { color: #1F6BFF; }
+.brand .tag { color: #35506E; font-size: .95rem; margin-left: .3rem; }
 .pick { color: #35506E; font-size: .95rem; margin: 0 0 .3rem; }
 
 h1.title { font-weight: 700; font-size: 2.1rem; line-height: 1.25; margin: 1rem 0 .4rem; color: #0F1F33; }
@@ -71,9 +77,16 @@ p.sub { color: #35506E; font-size: 1.05rem; margin: 0 0 1.2rem; line-height: 1.6
 div.stButton > button { background: #1F6BFF; color: #FFFFFF; border: 0; border-radius: 12px; font-weight: 700; font-size: 1.15rem; padding: .6rem 1.6rem; }
 div.stButton > button:hover { background: #1556CC; color: #FFFFFF; }
 div.stButton > button p { color: #FFFFFF !important; }
+[data-testid="stAlert"] { border-radius: 12px; }
+[data-testid="stAlert"] * { color: #0F1F33 !important; }
+[data-testid="stExpander"] summary { padding: .5rem .8rem; }
+[data-testid="stSelectbox"] div[data-baseweb="select"] > div { background: #FFFFFF !important; border: 2px solid #D3E3F7; border-radius: 12px; }
+[data-testid="stSelectbox"] div[data-baseweb="select"] * { color: #0F1F33 !important; }
+[data-testid="stAudioInput"] { border-radius: 12px; }
 </style>''', unsafe_allow_html=True)
 
 # ---------------- language ----------------
+st.markdown('<div class="brand"><span class="logo">🎙️</span><span class="bname">Doc<b>Vox</b></span><span class="tag">Rental agreement × voice note</span></div>', unsafe_allow_html=True)
 st.markdown(f'<p class="pick">{T["en"]["pick_lang"]} · {T["hi"]["pick_lang"]} · {T["ta"]["pick_lang"]}</p>', unsafe_allow_html=True)
 choice = st.radio("Language", list(LANGS), horizontal=True, label_visibility="collapsed")
 lang = LANGS[choice]
